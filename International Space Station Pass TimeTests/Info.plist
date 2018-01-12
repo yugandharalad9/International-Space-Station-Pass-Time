@@ -10,10 +10,20 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Please Allow Authorization</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Please Allow current Location for this app</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Please Allow Authorization for this app</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow user to access your location</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
