@@ -30,7 +30,6 @@
                                 </state>
                                 <connections>
                                     <action selector="curentPositionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Zf-wW-fVo"/>
-                                    <segue destination="tb5-mA-T8J" kind="show" id="wM0-bo-few"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,33 +45,36 @@
             </objects>
             <point key="canvasLocation" x="77.599999999999994" y="119.70443349753695"/>
         </scene>
-        <!--Data Table View Controller-->
-        <scene sceneID="hEw-nh-G6q">
+        <!--My Table View Controller-->
+        <scene sceneID="e5L-AH-b2M">
             <objects>
-                <tableViewController id="tb5-mA-T8J" customClass="DataTableViewController" customModule="International_Space_Station_Pass_Time" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c6R-M0-7A1">
+                <tableViewController storyboardIdentifier="TableViewController" id="e2z-Yd-h0K" customClass="MyTableViewController" customModule="International_Space_Station_Pass_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZIg-Oq-Uan">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bRP-aE-gKd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KYO-hc-jLy">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRP-aE-gKd" id="ObF-sl-ItT">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KYO-hc-jLy" id="Ma4-Ok-uxJ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="tb5-mA-T8J" id="Zj8-6b-rKA"/>
-                            <outlet property="delegate" destination="tb5-mA-T8J" id="Nrz-JQ-X4J"/>
+                            <outlet property="dataSource" destination="e2z-Yd-h0K" id="8xU-fG-MLp"/>
+                            <outlet property="delegate" destination="e2z-Yd-h0K" id="RiL-Zo-3eI"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="myTableView" destination="ZIg-Oq-Uan" id="Etm-QN-waP"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dty-Sr-n79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gz0-Kf-7fO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="120"/>
+            <point key="canvasLocation" x="911" y="124"/>
         </scene>
     </scenes>
     <resources>

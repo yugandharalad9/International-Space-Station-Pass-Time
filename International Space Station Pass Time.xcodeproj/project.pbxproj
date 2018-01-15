@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F75BF34200CF2FF004C5904 /* PassTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75BF33200CF2FF004C5904 /* PassTime.swift */; };
+		8F75BF3A200D4A59004C5904 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75BF39200D4A59004C5904 /* MyTableViewController.swift */; };
 		8FE8918C2007DE3D0092D992 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8918B2007DE3D0092D992 /* AppDelegate.swift */; };
 		8FE8918E2007DE3D0092D992 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8918D2007DE3D0092D992 /* ViewController.swift */; };
 		8FE891912007DE3D0092D992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8918F2007DE3D0092D992 /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		8FE891962007DE3D0092D992 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE891942007DE3D0092D992 /* LaunchScreen.storyboard */; };
 		8FE891A12007DE3D0092D992 /* International_Space_Station_Pass_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE891A02007DE3D0092D992 /* International_Space_Station_Pass_TimeTests.swift */; };
 		8FE891AC2007DE3D0092D992 /* International_Space_Station_Pass_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE891AB2007DE3D0092D992 /* International_Space_Station_Pass_TimeUITests.swift */; };
-		8FE891BA2007DF490092D992 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE891B92007DF490092D992 /* DataTableViewController.swift */; };
 		8FE891BC2008061C0092D992 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE891BB2008061C0092D992 /* GCDBlackBox.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F75BF33200CF2FF004C5904 /* PassTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassTime.swift; sourceTree = "<group>"; };
+		8F75BF39200D4A59004C5904 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		8FE891882007DE3C0092D992 /* International Space Station Pass Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "International Space Station Pass Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE8918B2007DE3D0092D992 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE8918D2007DE3D0092D992 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		8FE891A72007DE3D0092D992 /* International Space Station Pass TimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "International Space Station Pass TimeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE891AB2007DE3D0092D992 /* International_Space_Station_Pass_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = International_Space_Station_Pass_TimeUITests.swift; sourceTree = "<group>"; };
 		8FE891AD2007DE3D0092D992 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FE891B92007DF490092D992 /* DataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		8FE891BB2008061C0092D992 /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +105,8 @@
 			children = (
 				8FE8918B2007DE3D0092D992 /* AppDelegate.swift */,
 				8FE8918D2007DE3D0092D992 /* ViewController.swift */,
-				8FE891B92007DF490092D992 /* DataTableViewController.swift */,
+				8F75BF33200CF2FF004C5904 /* PassTime.swift */,
+				8F75BF39200D4A59004C5904 /* MyTableViewController.swift */,
 				8FE891BB2008061C0092D992 /* GCDBlackBox.swift */,
 				8FE8918F2007DE3D0092D992 /* Main.storyboard */,
 				8FE891922007DE3D0092D992 /* Assets.xcassets */,
@@ -266,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE8918E2007DE3D0092D992 /* ViewController.swift in Sources */,
-				8FE891BA2007DF490092D992 /* DataTableViewController.swift in Sources */,
+				8F75BF34200CF2FF004C5904 /* PassTime.swift in Sources */,
 				8FE891BC2008061C0092D992 /* GCDBlackBox.swift in Sources */,
+				8F75BF3A200D4A59004C5904 /* MyTableViewController.swift in Sources */,
 				8FE8918C2007DE3D0092D992 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

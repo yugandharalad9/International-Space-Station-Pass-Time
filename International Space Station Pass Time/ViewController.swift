@@ -27,7 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
         let locationValue: CLLocationCoordinate2D = manager.location!.coordinate
         print ("locations = \(locationValue.latitude) longitude = \(locationValue.longitude)")
-        fetchData()
+        fetchData(lat: locationValue.latitude, lon: locationValue.longitude)
         
     }
 
@@ -46,10 +46,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func fetchData()  {
+    func fetchData(lat: Double, lon: Double)  {
         // Create a Network Request
         let session = URLSession.shared
-        let url = URL(string: "http://api.open-notify.org/iss-pass.json?lat=60&lon=90")
+        let url = URL(string: "http://api.open-notify.org/iss-pass.json?lat=\(lat)&lon=\(lon)")
         let task = URLSession.shared.dataTask(with: url!) {
             (data, response, error) in
             //if an error occurs, print it and re-enable the UI
@@ -57,8 +57,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(error)
                 print("URL at time of error: \(String(describing: url))")
                 
-            }
             
+                
+            }
             //Guard: was there an error?
             
             guard (error == nil) else {
@@ -77,22 +78,58 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 displayError("No data was returned by the request")
                 return
             }
+            
             //parse the data
             let parsedResult: [String: AnyObject]
-            
             do{
-                parsedResult = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:AnyObject]
-                print(parsedResult)
+                parsedResult = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: AnyObject]
+                print("yugi result = \(parsedResult)")
+                
+                let resultCount = parsedResult.count
+                    print(resultCount)
+                
+                let allPasses = parsedResult["response"] as! Array<[String:Double]>
+                print("yugi allPasses = \(allPasses)")
+                
+                var PassTimes: Array<PassTime> = []
+                //PassTimes = nil
+                
+                for pass in allPasses{
+                    
+                    print("Pass  = \(pass)")
+                    PassTimes.append(PassTime(PassTimeDict: pass));
+                }
+                
+                let tableViewController:
+                    MyTableViewController = UIStoryboard(
+                        name: "Main", bundle: nil
+                        ).instantiateViewController(withIdentifier: "TableViewController") as! MyTableViewController
+                // .instantiatViewControllerWithIdentifier() returns AnyObject!
+                // this must be downcast to utilize it
+                
+                tableViewController.PassTimes = PassTimes
+                
+                self.present(tableViewController, animated: true, completion: nil)
+                
+                
+               
+                
+                
+                
+                
+                
+                
+                
+                
+                
             } catch {
                 displayError("Could not parse the data as JSON: '\(String(describing: data))'")
                 return
             }
             
+            
         }
         task.resume()
     }
-    
-    
-    
 }
 
